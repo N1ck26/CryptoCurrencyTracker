@@ -1,0 +1,6 @@
+fastapi
+aiohttp
+async_lru
+uvicorn
+pydantic_settings
+pydantic
