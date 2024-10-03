@@ -8,7 +8,8 @@ app.include_router(cmc_router)
 origins = [
  "http://212.193.27.122",
  "http://localhost:5173",
- "http://127.0.0.1:5173"
+ "http://127.0.0.1:5173",
+ 'http://172.19.0.2:8000',
  
 ]
 
