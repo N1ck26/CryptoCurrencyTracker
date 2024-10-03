@@ -6,5 +6,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-# CMD [ "uvicorn", "src.main:app", "--reload" ]
-CMD ['python3', 'src/main.py']
+CMD [ "uvicorn", "src.main:app", "--reload" ]
