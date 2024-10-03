@@ -28,7 +28,7 @@ const App = () => {
   })
 
   const FecthCurrencies = () => {
-    instance.get('http://212.193.27.122/api/cryptocurrencies').then(responce_data => {
+    instance.get('/api/cryptocurrencies').then(responce_data => {
       const CurrenciesResponce = responce_data.data
       const menuItems = [
         getItem('Список криптовалют', 'g1', null, 
@@ -42,7 +42,7 @@ const App = () => {
   }
 
   const FecthCurrency = () => {
-    instance.get(`http://212.193.27.122/api/cryptocurrencies/${currencyId}`).then(responce_data => {
+    instance.get(`/api/cryptocurrencies/${currencyId}`).then(responce_data => {
       setCurrencyData(responce_data.data)
     })
   }
