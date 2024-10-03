@@ -1,8 +1,7 @@
 from fastapi import APIRouter
 from src.init_cmc import cmc_client
 
-# router = APIRouter(prefix='/cryptocurrencies')
-router = APIRouter()
+router = APIRouter(prefix='/cryptocurrencies')
 
 @router.get('')
 async def get_all_cryptocurrencies():
