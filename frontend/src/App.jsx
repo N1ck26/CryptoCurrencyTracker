@@ -23,7 +23,7 @@ const App = () => {
 
 
   const FecthCurrencies = () => {
-    axios.get('http://127.0.0.1:8000/cryptocurrencies').then(responce_data => {
+    axios.get('http://212.193.27.122/api/cryptocurrencies').then(responce_data => {
       const CurrenciesResponce = responce_data.data
       const menuItems = [
         getItem('Список криптовалют', 'g1', null, 
