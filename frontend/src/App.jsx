@@ -20,10 +20,15 @@ const App = () => {
   const [currencyId, setCurrencyId] = useState(1)
   const [currencyData, setCurrencyData] = useState(null)
 
-
+  const instance = axios.create({
+    baseURL: 'http://212.193.27.122/api/cryptocurrencies',
+    timeout: 10000,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+  })
 
   const FecthCurrencies = () => {
-    axios.get('http://212.193.27.122/api/cryptocurrencies').then(responce_data => {
+    instance.get('http://212.193.27.122/api/cryptocurrencies').then(responce_data => {
       const CurrenciesResponce = responce_data.data
       const menuItems = [
         getItem('Список криптовалют', 'g1', null, 
@@ -37,7 +42,7 @@ const App = () => {
   }
 
   const FecthCurrency = () => {
-    axios.get(`http://212.193.27.122/api/cryptocurrencies/${currencyId}`).then(responce_data => {
+    instance.get(`http://212.193.27.122/api/cryptocurrencies/${currencyId}`).then(responce_data => {
       setCurrencyData(responce_data.data)
     })
   }
