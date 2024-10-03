@@ -1,5 +1,5 @@
 networks:
-  net_1:
+  dev:
 
 services:
   nginx:
@@ -12,16 +12,16 @@ services:
     volumes:
       - './nginx.conf:/etc/nginx/nginx.conf'
     networks:
-      - net_1
+      - dev
   
   backend:
     build:
       context: ./backend
     networks:
-      - net_1
+      - dev
 
   frontend:
     build:
       context: ./frontend
     networks:
-      - net_1
+      - dev
