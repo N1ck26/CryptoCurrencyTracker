@@ -21,7 +21,7 @@ const App = () => {
   const [currencyData, setCurrencyData] = useState(null)
 
   const instance = axios.create({
-    baseURL: '/api/cryptocurrencies',
+    baseURL: '',
     timeout: 10000,
     xsrfCookieName: 'XSRF-TOKEN',
     xsrfHeaderName: 'X-XSRF-TOKEN',
