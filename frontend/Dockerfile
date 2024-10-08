@@ -3,7 +3,7 @@ FROM node:alpine as build
 COPY package.json package.json
 RUN npm i
 COPY . .
-RUN npm run build
+RUN npm run dev
 
 
 FROM nginx:stable-alpine
