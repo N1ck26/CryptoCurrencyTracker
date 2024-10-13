@@ -6,7 +6,9 @@ app = FastAPI()
 app.include_router(cmc_router)
 
 origins = [
- "http://212.193.27.122"
+ "http://212.193.27.122",
+ "http://localhost:3000",
+ "http://localhost:8000",
 ]
 
 app.add_middleware(

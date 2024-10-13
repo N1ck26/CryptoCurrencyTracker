@@ -1,5 +1,6 @@
 networks:
   net_1:
+    driver: bridge
 
 services:
   nginx:
